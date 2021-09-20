@@ -1,5 +1,6 @@
 package com.msb.dongbao.protal.web.controller;
 
+import com.msb.dongbao.ums.entity.dto.UserMemberLoginParamDTO;
 import com.msb.dongbao.ums.entity.dto.UserMemberRegisterParamDTO;
 import com.msb.dongbao.ums.service.UmsMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,5 +38,11 @@ public class UserMemberController {
         umsMemberService.register(userMemberRegisterParamDTO);
         //umsMemberService.register();
         return "register";
+    }
+
+    @PostMapping("/login")
+    public String login(@RequestBody UserMemberLoginParamDTO userMemberLoginParamDTO){
+        return umsMemberService.login(userMemberLoginParamDTO);
+        //return "token";
     }
 }
