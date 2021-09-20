@@ -1,7 +1,7 @@
-package com.msb.msbdongbaoums.service;
+package com.msb.dongbao.ums.service;
 
-import com.msb.msbdongbaoums.entity.UmsMember;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.msb.dongbao.ums.entity.UmsMember;
 
 /**
  * <p>
@@ -12,5 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-09-20
  */
 public interface UmsMemberService extends IService<UmsMember> {
+
+    public String register();
 
 }

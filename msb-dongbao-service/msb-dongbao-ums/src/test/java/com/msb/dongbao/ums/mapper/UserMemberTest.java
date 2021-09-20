@@ -1,7 +1,7 @@
-package com.msb.msbdongbaoums.mapper;
+package com.msb.dongbao.ums.mapper;
 
 
-import com.msb.msbdongbaoums.entity.UmsMember;
+import com.msb.dongbao.ums.entity.UmsMember;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,5 +21,19 @@ public class UserMemberTest {
         umsMember.setEmail("email");
 
         umsMemberMapper.insert(umsMember);
+
+    }
+
+    @Test
+    void testUpdate(){
+        UmsMember umsMember=new UmsMember();
+        umsMember.setId(2L);
+        umsMember.setUsername("xiaohuagengxin");
+        umsMember.setStatus(0);
+        umsMember.setPassword("1gengxin");
+        umsMember.setNote("nihaoa");
+        umsMember.setNickName("gengxinnick");
+        umsMember.setEmail("email");
+        umsMemberMapper.updateById(umsMember);
     }
 }

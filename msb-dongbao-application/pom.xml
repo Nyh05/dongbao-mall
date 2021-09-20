@@ -11,5 +11,8 @@
 
     <artifactId>msb-dongbao-application</artifactId>
 
+    <dependencies>
+
+    </dependencies>
 
 </project>
