@@ -1,6 +1,7 @@
 package com.msb.dongbao.protal.web.controller;
 
 import com.msb.dongbao.common.base.result.ResultWrapper;
+import com.msb.dongbao.common.utill.JwtUtil;
 import com.msb.dongbao.ums.entity.dto.UserMemberLoginParamDTO;
 import com.msb.dongbao.ums.entity.dto.UserMemberRegisterParamDTO;
 import com.msb.dongbao.ums.service.UmsMemberService;
@@ -27,7 +28,7 @@ public class UserMemberController {
         return "hello";
     }
 
-    @GetMapping("/register")
+    @PostMapping("/register")
     public ResultWrapper register(@RequestBody @Valid UserMemberRegisterParamDTO userMemberRegisterParamDTO){
         /*String rowPassword = userMemberRegisterParamDTO.getPassword();
         BCryptPasswordEncoder  bCryptPasswordEncoder =new BCryptPasswordEncoder();
@@ -50,5 +51,19 @@ public class UserMemberController {
     public String login(@RequestBody UserMemberLoginParamDTO userMemberLoginParamDTO){
         return umsMemberService.login(userMemberLoginParamDTO);
         //return "token";
+    }
+    //解析token进行登录验证
+
+    /**
+     * 这是测试的，系统中的任意一个接口
+     * @param token
+     * @return
+     */
+    @GetMapping("/test-verify")
+    public String verify(String token){
+        String s = JwtUtil.ParseToken(token);
+        //token延期处理--直接在创建一个token返回即可
+        String t = JwtUtil.CreatToken(s);
+        return t;
     }
 }
