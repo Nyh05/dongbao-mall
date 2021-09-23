@@ -98,12 +98,13 @@
             <artifactId>msb-dongbao-common-util</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <!--<dependency>
+        <!--新加一个-->
+        <dependency>
             <groupId>com.msb</groupId>
             <artifactId>msb-dongbao-common-base</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>com.msb</groupId>
             <artifactId>msb-dongbao-common-util</artifactId>
             <version>0.0.1-SNAPSHOT</version>

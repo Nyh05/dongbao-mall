@@ -4,8 +4,16 @@ public enum StateCodeEnum {
     /**
      * 登录成功
      */
-    SUCCESS(200,"登录成功"),
-    FAIL(500,"登陆失败");
+    SUCCESS(200,"请求成功"),
+    FAIL(500,"请求失败"),
+
+    PASSWORD_ERROR(1001,"用户名密码不正确"),
+    USER_EMPTY(1002,"用户不存在");
+
+
+
+
+
 
     private int code;
     private String message;
