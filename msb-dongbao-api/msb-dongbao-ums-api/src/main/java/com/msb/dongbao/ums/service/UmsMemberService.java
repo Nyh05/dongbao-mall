@@ -13,7 +13,7 @@ import com.msb.dongbao.ums.entity.dto.UserMemberRegisterParamDTO;
  * @author nyh
  * @since 2021-09-20
  */
-public interface UmsMemberService extends IService<UmsMember> {
+public interface UmsMemberService /*extends IService<UmsMember>*/ {
 
     public String register(UserMemberRegisterParamDTO userMemberRegisterParamDTO);
 

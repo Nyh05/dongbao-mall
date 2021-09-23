@@ -10,9 +10,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>msb-dongbao-application</artifactId>
+    <modules>
+        <module>msb-dongbao-portal-web</module>
+    </modules>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.msb</groupId>
+            <artifactId>msb-dongbao-common-base</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>

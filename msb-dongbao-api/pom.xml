@@ -11,5 +11,7 @@
 
     <artifactId>msb-dongbao-api</artifactId>
 
-
+    <modules>
+        <module>msb-dongbao-ums-api</module>
+    </modules>
 </project>

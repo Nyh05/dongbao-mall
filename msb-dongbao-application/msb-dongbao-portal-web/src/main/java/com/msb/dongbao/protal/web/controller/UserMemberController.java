@@ -1,5 +1,6 @@
 package com.msb.dongbao.protal.web.controller;
 
+import com.msb.dongbao.common.base.result.ResultWrapper;
 import com.msb.dongbao.ums.entity.dto.UserMemberLoginParamDTO;
 import com.msb.dongbao.ums.entity.dto.UserMemberRegisterParamDTO;
 import com.msb.dongbao.ums.service.UmsMemberService;
@@ -7,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import javax.xml.transform.Result;
+
 @RestController
 @RequestMapping("/user-member")
 public class UserMemberController {
@@ -23,7 +28,7 @@ public class UserMemberController {
     }
 
     @GetMapping("/register")
-    public String register(@RequestBody UserMemberRegisterParamDTO userMemberRegisterParamDTO){
+    public ResultWrapper register(@RequestBody @Valid UserMemberRegisterParamDTO userMemberRegisterParamDTO){
         /*String rowPassword = userMemberRegisterParamDTO.getPassword();
         BCryptPasswordEncoder  bCryptPasswordEncoder =new BCryptPasswordEncoder();
         String newPassword = bCryptPasswordEncoder.encode(rowPassword);
@@ -33,11 +38,12 @@ public class UserMemberController {
         使用BCryptPasswordEncoder进行加密，每次产生的加密密码都不一样，防止彩虹表攻击*/
 
         //第二种方法引入passwordencoder，在applicaltion中注入bean
+        //int i = 1/0;
         String newPassword = passwordEncoder.encode(userMemberRegisterParamDTO.getPassword());
         userMemberRegisterParamDTO.setPassword(newPassword);
         umsMemberService.register(userMemberRegisterParamDTO);
         //umsMemberService.register();
-        return "register";
+        return ResultWrapper.getSuccessBuilder().data(null).build();
     }
 
     @PostMapping("/login")

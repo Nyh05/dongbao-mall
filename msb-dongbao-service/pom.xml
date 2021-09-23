@@ -10,6 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>msb-dongbao-service</artifactId>
+    <modules>
+        <module>msb-dongbao-ums</module>
+    </modules>
 
 
     <dependencies>

@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
  * @since 2021-09-20
  */
 @Service
-public class UmsMemberServiceImpl extends ServiceImpl<UmsMemberMapper, UmsMember> implements UmsMemberService {
+public class UmsMemberServiceImpl /*extends ServiceImpl<UmsMemberMapper, UmsMember>*/ implements UmsMemberService {
 
     @Autowired
     UmsMemberMapper umsMemberMapper;
