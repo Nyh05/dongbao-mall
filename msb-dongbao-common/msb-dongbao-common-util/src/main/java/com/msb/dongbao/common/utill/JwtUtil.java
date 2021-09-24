@@ -22,6 +22,7 @@ public class JwtUtil {
         String subject = body.getSubject();
         return subject;
     }
+    //作为测试token创建解析使用
     public static void main(String[] args) throws InterruptedException {
         String ss="教育";
         String s = CreatToken(ss);
