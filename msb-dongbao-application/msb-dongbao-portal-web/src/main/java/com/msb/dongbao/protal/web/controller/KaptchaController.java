@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/kaptcha")
+/*
+* 相关的类：MyGoogleKaptcha  exceptionHandler中的相关异常处理
+* */
 public class KaptchaController {
     @Autowired
     private Kaptcha kaptcha;
