@@ -19,8 +19,9 @@ public class InterceptorConfig implements WebMvcConfigurer {
         irn.addPathPatterns("/**");
         irn.excludePathPatterns("/user-member/register");
         irn.excludePathPatterns("/user-member/login");
-        irn.excludePathPatterns("/code/generator");
-        irn.excludePathPatterns("/code/verify");
+        /*irn.excludePathPatterns("/code/generator");
+        irn.excludePathPatterns("/code/verify");*/
+        irn.excludePathPatterns("/code/**");
     }
     @Bean
     public AuthInterceptor authInterceptor(){

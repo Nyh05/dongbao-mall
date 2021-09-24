@@ -95,13 +95,13 @@
                 </dependency>-->
         <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
         <!--光学识别 OCR-->
-        <!--<dependency>
+        <dependency>
             <groupId>net.sourceforge.tess4j</groupId>
             <artifactId>tess4j</artifactId>
             <version>4.5.4</version>
         </dependency>
 
-        <dependency>
+      <!--  <dependency>
             <groupId>com.octo.captcha</groupId>
             <artifactId>jcaptcha</artifactId>
             <version>1.0</version>
