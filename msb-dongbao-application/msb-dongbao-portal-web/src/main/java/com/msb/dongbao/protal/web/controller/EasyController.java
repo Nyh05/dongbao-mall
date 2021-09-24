@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/easy-captcha")
@@ -66,8 +69,6 @@ public class EasyController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
     @GetMapping("/verify")
@@ -80,5 +81,30 @@ public class EasyController {
         }else {
             return "验证码校验不通过";
         }
+    }
+
+
+    //通过uuid实现不同的key值，向redis中写入数据，实现不同系统间共同使用验证码
+    @GetMapping("/generator-uuid")
+    @TokenCheck(required = false)
+    public Map<String,String> generatorCodeUUID(HttpServletRequest request, HttpServletResponse response){
+
+
+            SpecCaptcha specCaptcha = new SpecCaptcha(100, 50);
+            String text = specCaptcha.text();
+            System.out.println("验证码 = " + text);
+
+            String uuid = UUID.randomUUID().toString();
+
+            String id = request.getSession().getId();
+
+            Map<String,String> map=new HashMap<>();
+
+            stringRedisTemplate.opsForValue().set(uuid,text);
+            String s = specCaptcha.toBase64();
+            System.out.println("base64:"+s);
+            map.put("uuid",uuid);
+            map.put("base64",id);
+            return map;
     }
 }
