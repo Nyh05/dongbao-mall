@@ -101,19 +101,19 @@
             <version>4.5.4</version>
         </dependency>
 
-      <!--  <dependency>
+       <dependency>
             <groupId>com.octo.captcha</groupId>
             <artifactId>jcaptcha</artifactId>
             <version>1.0</version>
-            &lt;!&ndash;<exclusions>&ndash;&gt;
+            <!--&lt;!&ndash;<exclusions>&ndash;&gt;
             &lt;!&ndash;<exclusion>&ndash;&gt;
             &lt;!&ndash;<groupId>com.jhlabs</groupId>&ndash;&gt;
             &lt;!&ndash;<artifactId>imaging</artifactId>&ndash;&gt;
             &lt;!&ndash;</exclusion>&ndash;&gt;
-            &lt;!&ndash;</exclusions>&ndash;&gt;
+            &lt;!&ndash;</exclusions>&ndash;&gt;-->
         </dependency>
 
-        <dependency>
+       <!--  <dependency>
             <groupId>com.ramostear</groupId>
             <artifactId>Happy-Captcha</artifactId>
             <version>1.0.1</version>

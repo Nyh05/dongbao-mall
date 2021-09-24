@@ -63,7 +63,7 @@ public class VerifyCodeController {
             }
             byte[] data =swapStream.toByteArray();
             return Base64.getEncoder().encodeToString(data);
-            
+
         } catch (Exception e) {
             System.out.println("验证码生成异常");
             return "";

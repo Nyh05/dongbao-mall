@@ -26,7 +26,7 @@ public class ImageCode {
         //需要一个画笔
         Graphics graphics = image.getGraphics();
         //用笔画图形，涂色
-        graphics.setColor(new Color(255,255,37));
+        graphics.setColor(new Color(55,255,37));
         //画出一个矩形
         graphics.fillRect(0,0,width,height);
         //设置字体
@@ -34,7 +34,8 @@ public class ImageCode {
         //设置随机数
         Random random=new Random();
         code="";
-        for (int i = 0; i < 6; i++) {
+        //设置六个随机数字当做验证码
+/*        for (int i = 0; i < 6; i++) {
             String s = String.valueOf(random.nextInt(10));
             this.code+=s;
             //设置字体的颜色
@@ -45,7 +46,11 @@ public class ImageCode {
             //划线
             graphics.setColor(new Color(62,78,192));
             graphics.drawLine((width/6)*i,50,(width/6)*i+20,50-30);
-        }
+        }*/
+
+
+        //通过计算简单的数学公式来实现验证码
+
 
         //画很多线
         graphics.setColor(new Color(245,11,37));

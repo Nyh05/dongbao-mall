@@ -10,15 +10,14 @@ public class TesseractTest {
     public static void main(String[] args) throws TesseractException {
         ITesseract iTesseract=new Tesseract();
         // 语言包 加进来
-        iTesseract.setDatapath("D:\\tessdata\\tessdata");
+        iTesseract.setDatapath("D:\\tessData");
         iTesseract.setLanguage("chi_sim");
 //		iTesseract.setLanguage("eng");
 
-        File fileDir = new File("d:\\data");
-        for (File file: fileDir.listFiles()){
+        File fileDir = new File("D:\\Data");
+        for (File file : fileDir.listFiles()) {
             String s = iTesseract.doOCR(file);
-            System.out.println(file.getName()+ "识别后数字是："+s);
-
+            System.out.println(file.getName()+"识别后的数字是："+s);
         }
     }
 }
