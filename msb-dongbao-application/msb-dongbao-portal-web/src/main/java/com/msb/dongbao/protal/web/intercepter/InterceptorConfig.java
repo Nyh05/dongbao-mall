@@ -23,6 +23,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
         irn.excludePathPatterns("/code/verify");*/
         irn.excludePathPatterns("/code/**");
         irn.excludePathPatterns("/jacaptcha/**");
+        irn.excludePathPatterns("/happy-captcha/**");
     }
     @Bean
     public AuthInterceptor authInterceptor(){

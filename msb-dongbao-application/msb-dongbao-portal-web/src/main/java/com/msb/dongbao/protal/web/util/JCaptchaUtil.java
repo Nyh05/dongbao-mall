@@ -14,7 +14,7 @@ import com.octo.captcha.service.image.ImageCaptchaService;
 import com.octo.captcha.service.multitype.GenericManageableCaptchaService;
 
 import java.awt.*;
-
+//手动制作验证码的工具
 public class JCaptchaUtil {
     //最好使用单列模式
     //饿汉模式，简单，不怕占用存储空间

@@ -22,7 +22,7 @@ import java.util.Base64;
 @RestController
 @RequestMapping("/jacaptcha")
 public class JCaptchaController {
-    String attrName="verifyCode";
+    //String attrName="verifyCode";
     @GetMapping("/generator")
     @TokenCheck(required = false)
     public void generatorCode(HttpServletRequest request,HttpServletResponse response){

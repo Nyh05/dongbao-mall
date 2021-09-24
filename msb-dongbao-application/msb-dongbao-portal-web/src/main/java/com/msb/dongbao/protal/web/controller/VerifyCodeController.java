@@ -46,6 +46,7 @@ public class VerifyCodeController {
 
     @GetMapping("/generator-base64")
     @TokenCheck(required = false)
+    //通过base64将图片进行编码，传递至前端，不用存储地址以及传输地址
     public String generatorCodeBase64(HttpServletRequest request,HttpServletResponse response){
         try {
             ImageCode imageCode=ImageCode.getInstance();
@@ -74,6 +75,7 @@ public class VerifyCodeController {
 
     @GetMapping("/verify")
     @TokenCheck(required = false)
+    //对生成的验证码进行校验
     public String verify(String verifyCode, HttpServletRequest request){
         String string = request.getSession().getAttribute(attrName).toString();
         if (verifyCode.equals(string)){
