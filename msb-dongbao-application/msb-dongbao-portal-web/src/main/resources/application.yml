@@ -22,4 +22,22 @@ mybatis-plus:
   mapper-locations:
     classpath*:/com/msb/dongbao/ums/mapper/xml/*.xml
   type-aliases-package: com.msb.dongbao.ums.entity
+kaptcha:
+  height: 100
+  width: 300
+  content:
+    length: 6
+    source: abcdefghjklmnopqrstuvwxyz23456789
+    space: 2
+  font:
+    color: red
+    name: Arial
+    size: 40
+  background-color:
+    from: yellow
+    to: green
+  border:
+    enabled: true
+    color: black
+    thickness: 1
 

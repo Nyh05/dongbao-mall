@@ -94,17 +94,23 @@
                     <version>5.3.2.RELEASE</version>
                 </dependency>-->
         <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
-        <!--光学识别 OCR-->
+        <!--光学识别 OCR用来破解验证码-->
         <dependency>
             <groupId>net.sourceforge.tess4j</groupId>
             <artifactId>tess4j</artifactId>
             <version>4.5.4</version>
         </dependency>
-
+        <!--排除的com.jhlabs在kaptcha中已经存在，也就是包冲突了，需要将其排除在外-->
        <dependency>
             <groupId>com.octo.captcha</groupId>
             <artifactId>jcaptcha</artifactId>
             <version>1.0</version>
+           <exclusions>
+               <exclusion>
+                   <groupId>com.jhlabs</groupId>
+                   <artifactId>imaging</artifactId>
+               </exclusion>
+           </exclusions>
             <!--&lt;!&ndash;<exclusions>&ndash;&gt;
             &lt;!&ndash;<exclusion>&ndash;&gt;
             &lt;!&ndash;<groupId>com.jhlabs</groupId>&ndash;&gt;
@@ -125,20 +131,20 @@
             <version>1.6.2</version>
 
         </dependency>
-
+        <!--可以向redis中存入数据-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
-     <!--    &lt;!&ndash;kcaptcha&ndash;&gt;
+        <!--&lt;!&ndash;kcaptcha&ndash;&gt;-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>kaptcha-spring-boot-starter</artifactId>
             <version>1.1.0</version>
         </dependency>
 
-        <dependency>
+      <!--   <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.3.2</version>
