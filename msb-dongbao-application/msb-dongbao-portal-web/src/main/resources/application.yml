@@ -6,9 +6,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   profiles:
     active: dev
-
-
-
+  redis:
+    database: 0
+    host: 192.168.32.138
+    port: 6379
+    timeout: 2000s
 
 mybatis-plus:
   configuration:

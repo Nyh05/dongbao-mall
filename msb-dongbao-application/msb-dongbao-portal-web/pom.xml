@@ -119,7 +119,7 @@
             <version>1.0.1</version>
         </dependency>
 
-      <!--   <dependency>
+        <dependency>
             <groupId>com.github.whvcse</groupId>
             <artifactId>easy-captcha</artifactId>
             <version>1.6.2</version>
@@ -131,7 +131,7 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
-        &lt;!&ndash;kcaptcha&ndash;&gt;
+     <!--    &lt;!&ndash;kcaptcha&ndash;&gt;
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>kaptcha-spring-boot-starter</artifactId>
