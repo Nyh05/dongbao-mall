@@ -149,13 +149,13 @@
             <artifactId>hutool-all</artifactId>
             <version>5.3.2</version>
         </dependency>
-
-     <!--   <dependency>
+        <!--直接将字符串格式转换成map形式，与hutools中的jsonobject不同，直接一步就准换好了-->
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.47</version>
             <scope>compile</scope>
-        </dependency>-->
+        </dependency>
 
     </dependencies>
  <!--   <dependencyManagement>
