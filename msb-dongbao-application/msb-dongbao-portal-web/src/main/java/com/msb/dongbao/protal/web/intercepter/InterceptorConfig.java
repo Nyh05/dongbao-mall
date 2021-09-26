@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-@Configuration
+//@Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -27,6 +27,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
         irn.excludePathPatterns("/easy-captcha/**");
         irn.excludePathPatterns("/kaptcha/**");
         irn.excludePathPatterns("/my-slider/**");
+        irn.excludePathPatterns("/api-safe/**");
     }
     @Bean
     public AuthInterceptor authInterceptor(){
